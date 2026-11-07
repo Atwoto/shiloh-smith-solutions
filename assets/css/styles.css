@@ -1,23 +1,23 @@
-/* Shiloh & Smith Solutions - High-End Editorial Style */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Instrument+Serif:italic,wght@0,400;1,400&family=Inter:wght@300;400;500;600&display=swap');
+/* Shiloh & Smith Solutions - Editorial Typography & Core Styles */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Instrument+Serif:italic,wght@0,400;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg-main: #FAFAFA;
-  --text-primary: #111827;
-  --text-secondary: #4B5563;
-  --text-muted: #9CA3AF;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
   --brand-navy: #0F172A;
   --brand-blue: #0284C7;
   --brand-green: #15803D;
-  --border-light: #E5E7EB;
-  --border-subtle: #F3F4F6;
+  --border-light: #E2E8F0;
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: var(--text-primary);
   background-color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .font-serif-italic {
@@ -26,27 +26,53 @@ body {
 }
 
 .font-heading {
-  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
-  letter-spacing: -0.025em;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.02em;
 }
 
-/* Crisp hairline dividers */
-.hairline-b {
-  border-bottom: 1px solid #E5E7EB;
-}
-.hairline-t {
-  border-top: 1px solid #E5E7EB;
-}
-.hairline-r {
-  border-right: 1px solid #E5E7EB;
+/* Base minimum typography enforcement */
+p, li, input, select, textarea, button {
+  font-size: 14px;
 }
 
-/* Subtle image frames */
+/* Hairline dividers */
+.hairline-b { border-bottom: 1px solid #E2E8F0; }
+.hairline-t { border-top: 1px solid #E2E8F0; }
+.hairline-r { border-right: 1px solid #E2E8F0; }
+
+/* Image styling */
 .editorial-img {
-  filter: contrast(1.02) saturate(1.05);
+  filter: contrast(1.02) saturate(1.03);
+  display: block;
+  width: 100%;
 }
 
-/* Interactive subtle transitions */
+/* Mobile sticky action bar */
+.mobile-sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 16px;
+}
+
+@media (min-width: 768px) {
+  .mobile-sticky-bar {
+    display: none;
+  }
+}
+
+/* Interactive transitions */
 a, button {
   transition: all 0.15s ease-in-out;
+}
+
+/* Inline Form Validation styling */
+.input-error {
+  border-color: #F43F5E !important;
+  background-color: #FFF1F2 !important;
 }

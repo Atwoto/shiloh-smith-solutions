@@ -32,7 +32,7 @@ A website built for **Shiloh & Smith Solutions**, tailored for diplomatic, human
 ---
 
 ## 🎙️ Core Services & Technical Capabilities
-1. **Interpretation Equipments:**
+1. **Interpretation Equipment:**
    - ISO 4043 & ISO 2603 certified soundproof interpreter booths.
    - Danish Interpretation Systems (DIS) digital consoles with push-to-mute cough button and dual operation.
    - Push-to-talk delegate discussion microphones with chairman priority override.
