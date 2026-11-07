@@ -1,0 +1,52 @@
+/* Shiloh & Smith Solutions - High-End Editorial Style */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Instrument+Serif:italic,wght@0,400;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-main: #FAFAFA;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --text-muted: #9CA3AF;
+  --brand-navy: #0F172A;
+  --brand-blue: #0284C7;
+  --brand-green: #15803D;
+  --border-light: #E5E7EB;
+  --border-subtle: #F3F4F6;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-primary);
+  background-color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif-italic {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+}
+
+.font-heading {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+/* Crisp hairline dividers */
+.hairline-b {
+  border-bottom: 1px solid #E5E7EB;
+}
+.hairline-t {
+  border-top: 1px solid #E5E7EB;
+}
+.hairline-r {
+  border-right: 1px solid #E5E7EB;
+}
+
+/* Subtle image frames */
+.editorial-img {
+  filter: contrast(1.02) saturate(1.05);
+}
+
+/* Interactive subtle transitions */
+a, button {
+  transition: all 0.15s ease-in-out;
+}
