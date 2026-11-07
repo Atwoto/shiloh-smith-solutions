@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 720" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071220"/>
+      <stop offset="50%" stop-color="#0c1d33"/>
+      <stop offset="100%" stop-color="#050c17"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a394a"/>
+      <stop offset="50%" stop-color="#182330"/>
+      <stop offset="100%" stop-color="#0f1722"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f2b38"/>
+      <stop offset="100%" stop-color="#081820"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <radialGradient id="irGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0D9488" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#071220" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="720" fill="url(#bg)"/>
+
+  <!-- Technical Background Grid -->
+  <g stroke="#1a2b3d" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="120" x2="800" y2="120"/>
+    <line x1="0" y1="240" x2="800" y2="240"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="0" y1="480" x2="800" y2="480"/>
+    <line x1="0" y1="600" x2="800" y2="600"/>
+    <line x1="160" y1="0" x2="160" y2="720"/>
+    <line x1="320" y1="0" x2="320" y2="720"/>
+    <line x1="480" y1="0" x2="480" y2="720"/>
+    <line x1="640" y1="0" x2="640" y2="720"/>
+  </g>
+
+  <!-- IR Emission Waves Background -->
+  <circle cx="400" cy="300" r="280" fill="url(#irGlow)"/>
+  <path d="M 330 80 Q 400 40 470 80" stroke="#0D9488" stroke-width="2.5" fill="none" opacity="0.4" stroke-dasharray="6,6"/>
+  <path d="M 300 110 Q 400 65 500 110" stroke="#0D9488" stroke-width="2.5" fill="none" opacity="0.6" stroke-dasharray="8,8"/>
+  <path d="M 270 140 Q 400 90 530 140" stroke="#0D9488" stroke-width="3" fill="none" opacity="0.8"/>
+
+  <!-- Stethophone Headset Arch and Cable -->
+  <path d="M 330 200 C 260 120, 180 160, 190 280 C 195 330, 230 350, 240 370" 
+        stroke="#475569" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M 470 200 C 540 120, 620 160, 610 280 C 605 330, 570 350, 560 370" 
+        stroke="#475569" stroke-width="5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Ear tips -->
+  <ellipse cx="330" cy="200" rx="9" ry="12" fill="#0D9488"/>
+  <ellipse cx="470" cy="200" rx="9" ry="12" fill="#0D9488"/>
+
+  <!-- Audio Cable to Receiver -->
+  <path d="M 400 340 C 400 370, 395 390, 400 420" 
+        stroke="#0D9488" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Central Stethophone Joiner / Transducer -->
+  <rect x="382" y="318" width="36" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <circle cx="400" cy="331" r="5" fill="#0D9488"/>
+
+  <!-- Pocket IR Receiver Unit -->
+  <g filter="url(#shadow)">
+    <!-- Main Body Chassis -->
+    <rect x="290" y="270" width="220" height="340" rx="20" fill="url(#metal)" stroke="#334155" stroke-width="2.5"/>
+    
+    <!-- Top Sensor Bar / Dark Acrylic IR Lens -->
+    <rect x="310" y="278" width="180" height="28" rx="8" fill="#090e17" stroke="#0D9488" stroke-width="1.5"/>
+    <circle cx="400" cy="292" r="6" fill="#ef4444" opacity="0.9"/>
+    <circle cx="400" cy="292" r="3" fill="#fca5a5"/>
+    <circle cx="360" cy="292" r="4" fill="#0D9488" opacity="0.8"/>
+    <circle cx="440" cy="292" r="4" fill="#0D9488" opacity="0.8"/>
+
+    <!-- LCD Display Screen -->
+    <rect x="318" y="325" width="164" height="92" rx="10" fill="url(#screenGrad)" stroke="#1e3a47" stroke-width="2"/>
+    
+    <!-- Screen Content -->
+    <text x="332" y="352" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0D9488" letter-spacing="1">CH 01</text>
+    <text x="430" y="352" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#64748b">VOL 14</text>
+    <text x="332" y="382" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#ffffff" letter-spacing="0.5">ENGLISH</text>
+    <text x="332" y="403" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" fill="#94a3b8">IR SIGNAL: OPTIMAL 98%</text>
+    <!-- Battery indicator -->
+    <rect x="445" y="393" width="22" height="11" rx="2" fill="none" stroke="#0D9488" stroke-width="1.5"/>
+    <rect x="447" y="395" width="14" height="7" rx="1" fill="#0D9488"/>
+    <rect x="468" y="397" width="2" height="3" fill="#0D9488"/>
+
+    <!-- Channel & Volume Controls -->
+    <!-- Up Button -->
+    <circle cx="355" cy="455" r="18" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <path d="M 350 458 L 355 450 L 360 458" stroke="#cbd5e1" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Down Button -->
+    <circle cx="355" cy="505" r="18" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <path d="M 350 502 L 355 510 L 360 502" stroke="#cbd5e1" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Volume Dial -->
+    <circle cx="445" cy="480" r="28" fill="#1e293b" stroke="#0D9488" stroke-width="2.5"/>
+    <circle cx="445" cy="480" r="22" fill="#0f172a"/>
+    <line x1="445" y1="462" x2="445" y2="472" stroke="#0D9488" stroke-width="3" stroke-linecap="round"/>
+    <text x="432" y="522" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">VOL</text>
+
+    <!-- Branding on Device -->
+    <text x="345" y="575" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="800" fill="#94a3b8" letter-spacing="1.5">SHILOH &amp; SMITH</text>
+    <text x="352" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#475569" letter-spacing="1">DIGITAL IR RECEIVER</text>
+    <!-- Headphone 3.5mm jack on bottom -->
+    <rect x="388" y="605" width="24" height="5" rx="2" fill="#64748b"/>
+  </g>
+
+  <!-- Technical Spec Callout Badge -->
+  <g transform="translate(480, 150)">
+    <rect width="250" height="64" rx="12" fill="#071727" stroke="#1e3a47" stroke-width="1.5" opacity="0.95"/>
+    <text x="16" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#0D9488" letter-spacing="1">INFRARED CARRIER</text>
+    <text x="16" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="600" fill="#e2e8f0">Up to 32 Clean Audio Channels</text>
+  </g>
+
+  <!-- Interference Callout Badge -->
+  <g transform="translate(70, 480)">
+    <rect width="200" height="64" rx="12" fill="#071727" stroke="#1e3a47" stroke-width="1.5" opacity="0.95"/>
+    <text x="16" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#F59E0B" letter-spacing="1">ZERO RF INTERFERENCE</text>
+    <text x="16" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="600" fill="#e2e8f0">Tamper-Proof Optical Audio</text>
+  </g>
+</svg>
