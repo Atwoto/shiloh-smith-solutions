@@ -111,6 +111,18 @@ nav.main a:hover{color:var(--ink); background:var(--surface-2)}
 .mobile-menu a.mlink span{color:var(--ink-3); font-weight:500; font-size:13px}
 .mobile-menu .mm-actions{display:flex; gap:10px; margin-top:16px; flex-wrap:wrap}
 
+
+/* Language switcher */
+.lang-switch{display:inline-flex; align-items:center; background:var(--surface-2); border:1px solid var(--line-strong); border-radius:999px; padding:3px; gap:2px}
+.lang-btn{background:transparent; border:none; padding:4px 9px; font-size:12px; font-weight:700; color:var(--ink-2); border-radius:999px; cursor:pointer; font-family:inherit; transition:all .2s ease}
+.lang-btn:hover{color:var(--ink)}
+.lang-btn.active{background:var(--navy); color:#fff; box-shadow:0 2px 6px rgba(7,20,36,.25)}
+.mm-lang-switch{display:flex; align-items:center; justify-content:space-between; padding:12px 2px; border-bottom:1px solid var(--line); margin-bottom:8px}
+.mm-lang-label{font-size:13.5px; font-weight:700; color:var(--ink-2)}
+.mm-lang-switch .lang-switch{padding:2px}
+.mm-lang-switch .lang-btn{padding:5px 11px; font-size:12.5px}
+@media(max-width:768px){ .nav-actions .lang-switch{display:none !important} }
+
 /* Responsive header & navigation layout */
 @media(max-width:1199px){
   .brand-name span{display:none !important}
@@ -140,6 +152,8 @@ nav.main a:hover{color:var(--ink); background:var(--surface-2)}
 
 /* ---------- Hero: full-screen, staggered blur-fade reveal ---------- */
 .hero{position:relative; background:var(--navy); color:#fff; overflow:hidden; border-radius:0 0 28px 28px; margin:0 10px}
+@media(min-width:900px){ .hero{min-height:calc(100dvh - 28px); display:flex; flex-direction:column; justify-content:space-between} }
+@media(max-width:899px){ .hero{min-height:auto} }
 @media(max-width:640px){ .hero{margin:0 6px; border-radius:0 0 22px 22px} }
 .hero-photo{position:absolute; inset:0}
 .hero-photo img{width:100%; height:100%; object-fit:cover; object-position:center 60%}
@@ -451,27 +465,23 @@ footer.site a:hover{color:#fff; text-decoration:underline}
 <header class="site">
   <div class="wrap">
     <div class="nav-pill">
-      <a class="brand" href="#top" aria-label="Shiloh and Smith Solutions — home">
-        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <path d="M10 30V20a14 14 0 0 1 28 0v10" stroke="#0D9488" stroke-width="3.4" stroke-linecap="round"/>
-          <rect x="6" y="27" width="8" height="13" rx="4" fill="#C9A86A"/>
-          <rect x="34" y="27" width="8" height="13" rx="4" fill="#C9A86A"/>
-          <rect x="17" y="22" width="3.6" height="9" rx="1.8" fill="#0D9488"/>
-          <rect x="22.2" y="17" width="3.6" height="16" rx="1.8" fill="#0D9488"/>
-          <rect x="27.4" y="21" width="3.6" height="11" rx="1.8" fill="#0D9488"/>
-          <path d="M38 40c0 3-2.4 4.5-5.5 4.5" stroke="#0D9488" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="31" cy="44.2" r="2.4" fill="#C9A86A"/>
-        </svg>
+      <a class="brand" href="#top" aria-label="Shiloh &amp; Smith Solutions — home">
+        <img class="brand-mark" src="assets/images/logo-mark.svg" alt="" aria-hidden="true" width="38" height="38" />
         <span class="brand-name"><b>Shiloh &amp; Smith</b><span>Solutions · Interpretation &amp; AV</span></span>
       </a>
       <nav class="main" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#equipment">Equipment</a>
-        <a href="#languages">Languages</a>
-        <a href="#sectors">Sectors</a>
-        <a href="#about">About</a>
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#equipment" data-i18n="navEquipment">Equipment</a>
+        <a href="#languages" data-i18n="navLanguages">Languages</a>
+        <a href="#sectors" data-i18n="navSectors">Sectors</a>
+        <a href="#about" data-i18n="navAbout">About</a>
       </nav>
       <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language selection">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="sw">SW</button>
+          <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        </div>
         <a class="btn btn-ghost btn-sm btn-wa-head" href="https://wa.me/254700567098?text=Hello%20Shiloh%20%26%20Smith%2C%20I%27d%20like%20to%20ask%20about%20interpretation%20for%20an%20upcoming%20event." target="_blank" rel="noopener">WhatsApp us</a>
         <a class="btn btn-shimmer btn-sm" href="#inquiry"><span class="cta-full">Request a quote</span><span class="cta-short">Get a quote</span></a>
         <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -481,6 +491,14 @@ footer.site a:hover{color:#fff; text-decoration:underline}
       </div>
     </div>
     <div class="mobile-menu" id="mobileMenu">
+      <div class="mm-lang-switch">
+        <span class="mm-lang-label">Language:</span>
+        <div class="lang-switch">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="sw">SW</button>
+          <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        </div>
+      </div>
       <a class="mlink" href="#services">Services <span>What we deliver →</span></a>
       <a class="mlink" href="#equipment">Equipment <span>Booths, DIS, IR →</span></a>
       <a class="mlink" href="#languages">Languages <span>6 working languages →</span></a>
@@ -506,9 +524,9 @@ footer.site a:hover{color:#fff; text-decoration:underline}
   <div class="hero-glow" aria-hidden="true"></div>
   <div class="wrap hero-inner">
     <div class="hero-copy">
-      <span class="hero-eyebrow hero-anim d1"><span class="dot-live"></span> Conference technology · Nairobi &amp; region</span>
-      <h1 class="hero-anim d2">Every delegate hears every word — <em class="shiny">in their own language.</em></h1>
-      <p class="hero-sub hero-anim d3">ISO-compliant soundproof booths, Danish Interpretation Systems (DIS) consoles, delegate microphones and accredited interpreters — deployed turn-key for international summits across East Africa and beyond.</p>
+      <span class="hero-eyebrow hero-anim d1" data-i18n="heroEyebrow"><span class="dot-live"></span> Language services for gatherings that matter · Nairobi &amp; East Africa</span>
+      <h1 class="hero-anim d2" data-i18n="heroH1">Where every voice <em class="shiny">belongs.</em></h1>
+      <p class="hero-sub hero-anim d3" data-i18n="heroSub">ISO-compliant soundproof mobile booths, Danish Interpretation Systems (DIS) digital consoles, and accredited simultaneous interpreters — thoughtfully brought together from first brief to final applause.</p>
       <div class="hero-ctas hero-anim d4">
         <a class="btn btn-shimmer" href="#inquiry">Request a proposal
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -606,7 +624,7 @@ footer.site a:hover{color:#fff; text-decoration:underline}
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="label">Technical inventory — fully owned</span>
-      <h2>The kit, <em>up close</em></h2>
+      <h2 data-i18n="equipmentTitle">The kit, <em>up close</em></h2>
       <p>No rentals from third parties, no last-minute substitutions. Standardised, broadcast-grade equipment, calibrated before every deployment so there is no acoustic cross-bleed and no signal dropout.</p>
     </div>
     <div class="equip-layout">
@@ -627,7 +645,7 @@ footer.site a:hover{color:#fff; text-decoration:underline}
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="label">Linguistic portfolio</span>
-      <h2>Six working <em>languages</em></h2>
+      <h2 data-i18n="languagesTitle">Language for <em>every room</em></h2>
       <p>A vetted roster of senior simultaneous interpreters for the major working languages of international diplomacy and African regional bodies — dual-interpreter rotation in every booth, as protocol requires.</p>
     </div>
     <div class="lang-grid reveal">
@@ -638,6 +656,22 @@ footer.site a:hover{color:#fff; text-decoration:underline}
       <div class="lang-card"><span class="code">ES</span><div class="native">Español</div><b>Spanish</b><p>For UN-system agencies and international partners operating across Latin America and Europe.</p></div>
       <div class="lang-card"><span class="code">PT</span><div class="native">Português</div><b>Portuguese</b><p>Covering Lusophone Africa — Mozambique and Angola delegations included in regional work.</p></div>
     </div>
+    <!-- Regional African & Global Language Coverage -->
+    <div class="reveal" style="margin:26px 0 10px; background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:22px 26px">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:14px">
+        <span style="font-size:12.5px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--teal)">Regional &amp; Extended Language Roster</span>
+        <span style="font-size:13px; color:var(--ink-3); font-weight:600">Great Lakes · Horn of Africa · Global</span>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:8px">
+        <span style="background:var(--surface-2); border:1px solid var(--line-strong); border-radius:999px; padding:6px 14px; font-size:13.5px; font-weight:700; color:var(--ink)">Somali (Soomaali)</span>
+        <span style="background:var(--surface-2); border:1px solid var(--line-strong); border-radius:999px; padding:6px 14px; font-size:13.5px; font-weight:700; color:var(--ink)">Amharic (አማርኛ)</span>
+        <span style="background:var(--surface-2); border:1px solid var(--line-strong); border-radius:999px; padding:6px 14px; font-size:13.5px; font-weight:700; color:var(--ink)">Lingala (Lingála)</span>
+        <span style="background:var(--surface-2); border:1px solid var(--line-strong); border-radius:999px; padding:6px 14px; font-size:13.5px; font-weight:700; color:var(--ink)">Dholuo (Luo)</span>
+        <span style="background:var(--surface-2); border:1px solid var(--line-strong); border-radius:999px; padding:6px 14px; font-size:13.5px; font-weight:700; color:var(--ink)">Mandarin Chinese (中文)</span>
+        <span style="background:color-mix(in srgb, var(--teal) 10%, var(--surface)); border:1px dashed var(--teal); border-radius:999px; padding:6px 14px; font-size:13px; font-weight:700; color:var(--teal)">+ Additional African &amp; global languages on request</span>
+      </div>
+    </div>
+
     <div class="mode-strip reveal">
       <div class="mode"><b>Simultaneous</b><p>Real-time booth interpretation with dual-interpreter rotation — the summit standard.</p></div>
       <div class="mode"><b>Consecutive</b><p>For press briefings, bilateral meetings and site visits where a booth isn't practical.</p></div>
@@ -817,6 +851,10 @@ footer.site a:hover{color:#fff; text-decoration:underline}
               <button type="button" class="chip" data-lang="Arabic" aria-pressed="false">Arabic</button>
               <button type="button" class="chip" data-lang="Spanish" aria-pressed="false">Spanish</button>
               <button type="button" class="chip" data-lang="Portuguese" aria-pressed="false">Portuguese</button>
+              <button type="button" class="chip" data-lang="Somali" aria-pressed="false">Somali</button>
+              <button type="button" class="chip" data-lang="Amharic" aria-pressed="false">Amharic</button>
+              <button type="button" class="chip" data-lang="Lingala" aria-pressed="false">Lingala</button>
+              <button type="button" class="chip" data-lang="Mandarin" aria-pressed="false">Mandarin</button>
             </div>
           </div>
           <div class="field f-full">
@@ -833,7 +871,7 @@ footer.site a:hover{color:#fff; text-decoration:underline}
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
             Send via Email</button>
         </div>
-        <p class="form-fineprint">Either button opens your own WhatsApp or email app with the enquiry pre-written — you review it, then press send there. Nothing is sent from this page itself.</p>
+        <p class="form-fineprint" data-i18n="formNotice">Either button opens your own WhatsApp or email app with the enquiry pre-written — you review it, then press send there. Your details are shared only when you choose to send your WhatsApp message or email.</p>
         <div class="form-success" id="formSuccess" role="status">
           <b><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#128C4B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.7 2.7L16.5 9"/></svg><span id="successTitle">Your enquiry is ready to send</span></b>
           <p id="successBody"></p>
@@ -851,12 +889,7 @@ footer.site a:hover{color:#fff; text-decoration:underline}
     <div class="foot-grid">
       <div class="foot-brand">
         <a class="brand" href="#top" aria-label="Back to top" style="color:#fff">
-          <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <path d="M10 30V20a14 14 0 0 1 28 0v10" stroke="#2DD4BF" stroke-width="3.4" stroke-linecap="round"/>
-            <rect x="6" y="27" width="8" height="13" rx="4" fill="#C9A86A"/><rect x="34" y="27" width="8" height="13" rx="4" fill="#C9A86A"/>
-            <rect x="17" y="22" width="3.6" height="9" rx="1.8" fill="#2DD4BF"/><rect x="22.2" y="17" width="3.6" height="16" rx="1.8" fill="#2DD4BF"/><rect x="27.4" y="21" width="3.6" height="11" rx="1.8" fill="#2DD4BF"/>
-            <path d="M38 40c0 3-2.4 4.5-5.5 4.5" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round"/><circle cx="31" cy="44.2" r="2.4" fill="#C9A86A"/>
-          </svg>
+          <img class="brand-mark" src="assets/images/logo-mark.svg" alt="" aria-hidden="true" width="38" height="38" />
           <span class="brand-name"><b style="color:#fff">Shiloh &amp; Smith</b><span style="color:#A7BCCB">Solutions · Interpretation &amp; AV</span></span>
         </a>
         <p>Simultaneous interpretation, ISO soundproof booths and conference audio — owned, calibrated and crewed by our own team.</p>
@@ -864,8 +897,8 @@ footer.site a:hover{color:#fff; text-decoration:underline}
       <div>
         <h4>Explore</h4>
         <div class="foot-links">
-          <a href="#services">Services</a><a href="#equipment">Equipment</a><a href="#languages">Languages</a>
-          <a href="#sectors">Sectors</a><a href="#coverage">Regional coverage</a><a href="privacy.html">Privacy Policy</a><a href="#inquiry">Request a proposal</a>
+          <a href="#services" data-i18n="navServices">Services</a><a href="#equipment" data-i18n="navEquipment">Equipment</a><a href="#languages" data-i18n="navLanguages">Languages</a>
+          <a href="#sectors" data-i18n="navSectors">Sectors</a><a href="#coverage">Regional coverage</a><a href="privacy.html">Privacy Policy</a><a href="#inquiry">Request a proposal</a>
         </div>
       </div>
       <div>
@@ -1233,6 +1266,77 @@ form.addEventListener('submit', function(e){
   window.location.href = 'mailto:bigwi.mike@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   showSuccess('email', d);
 });
+
+/* ============ Multilingual Switcher (EN / SW / FR) ============ */
+var I18N = {
+  en: {
+    heroEyebrow: "<span class=\"dot-live\"></span> Language services for gatherings that matter · Nairobi & East Africa",
+    heroH1: "Where every voice <em class=\"shiny\">belongs.</em>",
+    heroSub: "ISO-compliant soundproof mobile booths, Danish Interpretation Systems (DIS) digital consoles, and accredited simultaneous interpreters — thoughtfully brought together from first brief to final applause.",
+    navServices: "Services",
+    navEquipment: "Equipment",
+    navLanguages: "Languages",
+    navSectors: "Sectors",
+    navAbout: "About",
+    equipmentTitle: "The kit, <em>up close</em>",
+    languagesTitle: "Language for <em>every room</em>",
+    aboutTitle: "People before <em>process</em>",
+    formNotice: "Either button opens your own WhatsApp or email app with the enquiry pre-written — you review it, then press send there. Your details are shared only when you choose to send your WhatsApp message or email."
+  },
+  sw: {
+    heroEyebrow: "<span class=\"dot-live\"></span> Huduma za lugha kwa mikutano ya maana · Nairobi na Afrika Mashariki",
+    heroH1: "Kila sauti <em class=\"shiny\">ina nafasi.</em>",
+    heroSub: "Wakalimani wenye weledi, tafsiri sahihi na teknolojia ya mikutano ya kisasa (booths za ISO 4043, DIS consoles) — vikiletwa pamoja kwa makini kuanzia maandalizi hadi mwisho wa tukio.",
+    navServices: "Huduma",
+    navEquipment: "Vifaa",
+    navLanguages: "Lugha",
+    navSectors: "Nyanja",
+    navAbout: "Kuhusu sisi",
+    equipmentTitle: "Vifaa vyetu <em>kwa ukaribu</em>",
+    languagesTitle: "Lugha kwa <em>kila mkutano</em>",
+    aboutTitle: "Watu kwanza kabla ya <em>mchakato</em>",
+    formNotice: "Kitufe chochote kinafungua WhatsApp au barua pepe yako na maelezo tayari yameandikwa. Maelezo yako yatatumwa pale tu utakapochagua kubonyeza kutuma huko."
+  },
+  fr: {
+    heroEyebrow: "<span class=\"dot-live\"></span> Services linguistiques pour les événements d'envergure · Nairobi et Afrique de l'Est",
+    heroH1: "Chaque voix <em class=\"shiny\">a sa place.</em>",
+    heroSub: "Cabines insonorisées conformes ISO 4043, consoles numériques DIS et interprètes de conférence chevronnés — réunis avec rigueur du premier briefing aux applaudissements finaux.",
+    navServices: "Services",
+    navEquipment: "Équipements",
+    navLanguages: "Langues",
+    navSectors: "Secteurs",
+    navAbout: "À propos",
+    equipmentTitle: "Le matériel, <em>en détail</em>",
+    languagesTitle: "La langue pour <em>chaque salle</em>",
+    aboutTitle: "L'humain avant le <em>processus</em>",
+    formNotice: "Chaque bouton ouvre votre propre application WhatsApp ou e-mail avec la demande pré-rédigée. Vos coordonnées ne sont partagées que lorsque vous choisissez d'envoyer votre message."
+  }
+};
+
+function setLanguage(lang){
+  var dict = I18N[lang] || I18N.en;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var k = el.getAttribute('data-i18n');
+    if (dict[k]) el.innerHTML = dict[k];
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(b){
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+  document.documentElement.lang = lang;
+  try { localStorage.setItem('ss_lang', lang); } catch(e){}
+}
+
+document.querySelectorAll('.lang-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    setLanguage(btn.getAttribute('data-lang'));
+  });
+});
+
+try {
+  var savedLang = localStorage.getItem('ss_lang');
+  if (savedLang && I18N[savedLang]) setLanguage(savedLang);
+} catch(e){}
+
 </script>
 </body>
 </html>

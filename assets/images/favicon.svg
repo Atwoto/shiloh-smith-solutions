@@ -1,16 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="14" fill="#0F172A"/>
-  <!-- Headphone Arc -->
-  <path d="M16 32 C16 20 23 12 32 12 C41 12 48 20 48 32" fill="none" stroke="#0284C7" stroke-width="4" stroke-linecap="round"/>
-  <!-- Left Earcup -->
-  <rect x="12" y="28" width="8" height="16" rx="4" fill="#16A34A"/>
-  <!-- Right Earcup -->
-  <rect x="44" y="28" width="8" height="16" rx="4" fill="#0284C7"/>
-  <!-- Center Soundwaves -->
-  <line x1="26" y1="26" x2="26" y2="38" stroke="#16A34A" stroke-width="3" stroke-linecap="round"/>
-  <line x1="32" y1="20" x2="32" y2="44" stroke="#0284C7" stroke-width="3.5" stroke-linecap="round"/>
-  <line x1="38" y1="24" x2="38" y2="40" stroke="#16A34A" stroke-width="3" stroke-linecap="round"/>
-  <!-- Microphone Boom -->
-  <path d="M44 40 C44 48 36 50 32 50" fill="none" stroke="#0284C7" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="30" cy="50" r="3" fill="#16A34A"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Shiloh &amp; Smith Solutions favicon</title>
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18D7F2"/>
+      <stop offset="1" stop-color="#0756C9"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#39B83B"/>
+      <stop offset="1" stop-color="#08751E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Headset arch -->
+  <path d="M22 61a42 42 0 0 1 84 0" fill="none" stroke="url(#blue)"
+        stroke-width="10" stroke-linecap="round"/>
+  <!-- Ear cups -->
+  <path d="M15 57c0-7 5-12 12-12h5v43h-5c-7 0-12-5-12-12z" fill="url(#blue)"/>
+  <path d="M96 45h5c7 0 12 5 12 12v19c0 7-5 12-12 12h-5z" fill="url(#blue)"/>
+  <!-- Green inner cushions -->
+  <rect x="28" y="48" width="11" height="38" rx="5.5" fill="url(#green)"/>
+  <rect x="89" y="48" width="11" height="38" rx="5.5" fill="url(#green)"/>
+  <!-- Sound waveform -->
+  <rect x="45" y="57" width="10" height="25" rx="5" fill="url(#blue)"/>
+  <rect x="59" y="39" width="10" height="49" rx="5" fill="url(#blue)"/>
+  <rect x="73" y="57" width="10" height="25" rx="5" fill="url(#blue)"/>
+  <!-- Microphone boom and tip -->
+  <path d="M101 86c-3 15-16 24-32 24H61" fill="none" stroke="url(#blue)"
+        stroke-width="7" stroke-linecap="round"/>
+  <rect x="49" y="104" width="23" height="12" rx="6" fill="url(#blue)"/>
+  <rect x="66" y="104" width="7" height="12" rx="3.5" fill="url(#green)"/>
 </svg>

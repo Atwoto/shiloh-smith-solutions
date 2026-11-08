@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Shiloh &amp; Smith Solutions</title>
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#19D7F1"/>
+      <stop offset="0.48" stop-color="#0798EE"/>
+      <stop offset="1" stop-color="#0752C7"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#42C83B"/>
+      <stop offset="1" stop-color="#08751E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Headset band -->
+  <path d="M111 172a145 145 0 0 1 290 0" fill="none" stroke="url(#blue)"
+        stroke-width="19" stroke-linecap="round"/>
+  <!-- Outer ear cups -->
+  <path d="M77 170c0-25 17-43 41-43h13v145h-13c-24 0-41-18-41-43z" fill="url(#blue)"/>
+  <path d="M381 127h13c24 0 41 18 41 43v59c0 25-17 43-41 43h-13z" fill="url(#blue)"/>
+  <!-- Green ear cushions -->
+  <rect x="119" y="135" width="35" height="137" rx="17.5" fill="url(#green)"/>
+  <rect x="358" y="135" width="35" height="137" rx="17.5" fill="url(#green)"/>
+  <!-- Audio waveform -->
+  <rect x="174" y="174" width="27" height="91" rx="13.5" fill="url(#blue)"/>
+  <rect x="216" y="145" width="27" height="149" rx="13.5" fill="url(#blue)"/>
+  <rect x="269" y="145" width="27" height="149" rx="13.5" fill="url(#blue)"/>
+  <rect x="311" y="174" width="27" height="91" rx="13.5" fill="url(#blue)"/>
+  <!-- Microphone boom -->
+  <path d="M401 266c-7 49-47 76-94 76h-18" fill="none" stroke="url(#blue)"
+        stroke-width="19" stroke-linecap="round"/>
+  <rect x="253" y="325" width="82" height="39" rx="19.5" fill="url(#blue)"/>
+  <path d="M313 325h13c11 0 20 9 20 19.5S337 364 326 364h-13c11-9 15-26 0-39z" fill="url(#green)"/>
+
+  <!-- Full brand name -->
+  <text x="256" y="421" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-size="47"
+        font-weight="800" letter-spacing="-2.3" fill="#078FE5">Shiloh <tspan fill="#168A2B">&amp;</tspan> Smith</text>
+  <path d="M76 450h54M382 450h54" stroke="#168A2B" stroke-width="5"/>
+  <text x="256" y="459" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-size="23"
+        font-weight="700" letter-spacing="8" fill="#168A2B">SOLUTIONS</text>
+</svg>
