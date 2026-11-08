@@ -13,7 +13,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23071424'/%3E%3Cpath d='M9 21V13a7 7 0 0 1 14 0v8' stroke='%232DD4BF' stroke-width='2.6' fill='none' stroke-linecap='round'/%3E%3Crect x='7' y='18' width='5' height='8' rx='2.5' fill='%23C9A86A'/%3E%3Crect x='20' y='18' width='5' height='8' rx='2.5' fill='%23C9A86A'/%3E%3C/svg%3E" />
 <title>Shiloh &amp; Smith Solutions — Simultaneous Interpretation &amp; Conference AV, Nairobi</title>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"Shiloh & Smith Solutions","description":"Simultaneous interpretation equipment rental, certified conference interpreters and conference AV production.","telephone":"+254700567098","email":"bigwi.mike@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Nairobi","addressCountry":"KE"},"areaServed":["Kenya","Uganda","Tanzania","Rwanda","Burundi","South Sudan","DR Congo"],"knowsLanguage":["English","French","Spanish","Portuguese","Swahili","Arabic"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Shiloh & Smith Solutions","url":"https://shiloh-smith-solutions.vercel.app/","telephone":"+254700567098","email":"bigwi.mike@gmail.com","description":"ISO-compliant soundproof mobile interpretation booths, Danish Interpretation Systems (DIS) digital consoles, conference AV production and accredited simultaneous conference interpreters across Kenya and East Africa.","address":{"@type":"PostalAddress","addressLocality":"Nairobi","addressCountry":"KE"},"contactPoint":{"@type":"ContactPoint","telephone":"+254700567098","contactType":"customer service","areaServed":["KE","UG","TZ","RW","BI","SS","CD"],"availableLanguage":["English","Kiswahili","French"]},"areaServed":["Kenya","Uganda","Tanzania","Rwanda","Burundi","South Sudan","DR Congo"],"availableLanguage":["English","Kiswahili","French","Arabic","Portuguese","Spanish","Mandarin Chinese","Somali","Amharic","Lingala","Dholuo"],"serviceType":["Conference interpreting","Simultaneous interpretation equipment rental","ISO 4043 soundproof booth rental","DIS digital interpreter consoles","Infrared delegate audio distribution","Document translation","Hybrid event audio integration","Conference AV production"]}
 </script>
 <script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -241,6 +241,33 @@ nav.main a:hover{color:var(--ink); background:var(--surface-2)}
 @media(min-width:860px){ .statement-cols{grid-template-columns:1fr 1fr 1fr} }
 .statement-cols h3{font-size:16px; margin-bottom:8px}
 .statement-cols p{font-size:14.5px; color:var(--ink-2)}
+
+/* ---------- Partnership Pillars: Human, Trust-First Guarantees ---------- */
+.partnership-pillars{margin-top:36px; padding:28px; background:var(--surface); border:1px solid var(--line); border-radius:20px; box-shadow:0 10px 30px -12px rgba(7,20,36,.08)}
+.pillars-label{display:block; font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--teal); margin-bottom:18px}
+.pillars-grid{display:grid; gap:16px; grid-template-columns:1fr}
+@media(min-width:860px){ .pillars-grid{grid-template-columns:repeat(3, 1fr)} }
+.pillar-card{position:relative; background:var(--surface-2); border:1px solid var(--line-strong); border-radius:14px; padding:22px; transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+.pillar-card:hover{transform:translateY(-2px); border-color:var(--teal); box-shadow:0 12px 24px -8px rgba(7,20,36,.12)}
+.pillar-arrow{display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:color-mix(in srgb, var(--teal) 15%, transparent); color:var(--teal-deep); font-weight:800; font-size:15px; margin-bottom:12px}
+.pillar-card h4{font-size:16px; font-weight:700; color:var(--ink); margin-bottom:8px; line-height:1.3}
+.pillar-card p{font-size:13.5px; color:var(--ink-2); line-height:1.55; margin:0}
+
+/* ---------- Event Formats: Architectural Grid ---------- */
+.format-grid{display:grid; gap:16px; grid-template-columns:1fr; margin-top:28px}
+@media(min-width:700px){ .format-grid{grid-template-columns:repeat(2, 1fr)} }
+.format-card{background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:26px 24px; transition:all .25s ease; position:relative; overflow:hidden}
+.format-card:hover{transform:translateY(-3px); border-color:var(--teal); box-shadow:0 16px 32px -10px rgba(7,20,36,.12)}
+.format-card .fmt-icon{width:42px; height:42px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; background:color-mix(in srgb, var(--teal) 12%, var(--surface)); color:var(--teal); margin-bottom:14px; border:1px solid color-mix(in srgb, var(--teal) 25%, transparent)}
+.format-card h3{font-size:18.5px; font-weight:700; color:var(--ink); margin-bottom:10px; font-family:"Newsreader", serif; letter-spacing:-.01em}
+.format-card p{font-size:13.5px; color:var(--ink-2); line-height:1.6; margin:0}
+
+/* ---------- Format Chips in Quotation Builder ---------- */
+#formatChips{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px}
+#formatChips .chip{background:var(--surface-2); border:1px solid var(--line-strong); border-radius:999px; padding:7px 15px; font-size:13px; font-weight:600; color:var(--ink-2); cursor:pointer; font-family:inherit; transition:all .2s ease; user-select:none}
+#formatChips .chip:hover{border-color:var(--teal); color:var(--ink); transform:translateY(-1px)}
+#formatChips .chip.active, #formatChips .chip[aria-pressed="true"]{background:var(--navy); border-color:var(--navy); color:#fff; font-weight:700; box-shadow:0 3px 10px -2px rgba(7,20,36,.25)}
+#formatChips .chip:active{transform:scale(0.97)}
 
 /* ---------- Bento grid: services (Magic UI pattern, spotlight hover) ---------- */
 .bento{display:grid; gap:14px; grid-template-columns:1fr}
@@ -499,6 +526,7 @@ footer.site a:hover{color:#fff; text-decoration:underline}
           <button type="button" class="lang-btn" data-lang="fr">FR</button>
         </div>
       </div>
+      <a class="mlink" href="#event-formats">Event Formats <span>Conferences, training, hybrid →</span></a>
       <a class="mlink" href="#services">Services <span>What we deliver →</span></a>
       <a class="mlink" href="#equipment">Equipment <span>Booths, DIS, IR →</span></a>
       <a class="mlink" href="#languages">Languages <span>6 working languages →</span></a>
@@ -602,6 +630,61 @@ footer.site a:hover{color:#fff; text-decoration:underline}
       <div><h3>Why we exist</h3><p>Shiloh &amp; Smith was established to bridge critical communication divides during multilateral diplomacy, regional trade treaties, peace negotiations and international development conferences.</p></div>
       <div><h3>Owned, not rented</h3><p>We operate fully owned, calibrated inventory — ISO soundproof booths, DIS hardware and infrared channels — so the system at your summit is the system we maintain every week.</p></div>
       <div><h3>People in the room</h3><p>Coordinated directly by Mike Bigwi &amp; Fidel from Nairobi, with dedicated sound technicians on-site throughout your proceedings — not a call centre, not a subcontract chain.</p></div>
+    </div>
+    <!-- 3 Partnership Pillars from prototype -->
+    <div class="partnership-pillars reveal">
+      <span class="pillars-label" data-i18n="pillarsTitle">What a good partnership feels like</span>
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <span class="pillar-arrow">↗</span>
+          <h4 data-i18n="pillar1Title">Clarity before event day</h4>
+          <p data-i18n="pillar1Desc">Detailed speaker and interpreter briefings, acoustic site assessments, precise schedule coordination, and contingency planning well ahead of opening remarks.</p>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-arrow">↗</span>
+          <h4 data-i18n="pillar2Title">Respect for language and context</h4>
+          <p data-i18n="pillar2Desc">Terminology, technical jargon, dialect nuances, and diplomatic register matched by vetted, accredited simultaneous interpreters with domain expertise.</p>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-arrow">↗</span>
+          <h4 data-i18n="pillar3Title">One coordinated point of contact</h4>
+          <p data-i18n="pillar3Desc">A single dedicated project lead on-site in Nairobi who coordinates booth technicians, interpreter teams, and venue sound crews without subcontract chains.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- EVENT FORMATS -->
+<section class="sec" id="event-formats" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">Event formats</span>
+      <h2 data-i18n="formatsTitle">Different events. <em>One thoughtful language plan.</em></h2>
+      <p data-i18n="formatsSub">Whether it is a high-level ministerial summit or a technical training seminar, we shape the acoustics, interpreter briefing, and audio distribution around how your room actually operates.</p>
+    </div>
+    <div class="format-grid reveal">
+      <div class="format-card">
+        <div class="fmt-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Conferences &amp; Forums</h3>
+        <p>Support plenary sessions, keynote addresses, panel debates, and parallel breakout tracks with dedicated ISO silent booths and multi-channel IR headsets for all delegates.</p>
+      </div>
+      <div class="format-card">
+        <div class="fmt-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <h3>Workshops &amp; Training</h3>
+        <p>Facilitate interactive two-way learning, practical exercises, and participant questions across languages with mobile wireless delegate mics and agile interpreter handovers.</p>
+      </div>
+      <div class="format-card">
+        <div class="fmt-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <h3>Government &amp; Diplomatic Summits</h3>
+        <p>Conduct sensitive multilateral negotiations under strict confidentiality. Line-of-sight infrared audio transmission guarantees that no speech leaks beyond the room perimeter.</p>
+      </div>
+      <div class="format-card">
+        <div class="fmt-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>Hybrid &amp; Regional Events</h3>
+        <p>Bridge physical floor microphones with remote virtual delegates on Zoom, Microsoft Teams, and Webex, complete with clean split audio feeds and dedicated remote monitoring.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -826,6 +909,15 @@ footer.site a:hover{color:#fff; text-decoration:underline}
           <div class="field">
             <label for="f-dates">Event dates &amp; location <span class="opt">(or TBC)</span></label>
             <input id="f-dates" name="dates" type="text" placeholder="e.g. 15–18 Nov, Nairobi / Kigali" />
+          </div>
+          <div class="field">
+            <label id="formatLabel">Event format <span class="opt">(tap to select)</span></label>
+            <div class="chips" id="formatChips" role="group" aria-labelledby="formatLabel">
+              <button type="button" class="chip active" data-format="Conference / Forum" aria-pressed="true">Conference / Forum</button>
+              <button type="button" class="chip" data-format="Workshop / Training" aria-pressed="false">Workshop / Training</button>
+              <button type="button" class="chip" data-format="Government / NGO Summit" aria-pressed="false">Government / NGO</button>
+              <button type="button" class="chip" data-format="Hybrid / Virtual (RSI)" aria-pressed="false">Hybrid / Virtual</button>
+            </div>
           </div>
           <div class="field">
             <label for="f-service">Service needed</label>
@@ -1205,9 +1297,26 @@ function validate(){
     if (f) f.classList.remove('invalid');
   });
 });
+function selectedFormat(){
+  var active = document.querySelector('#formatChips .chip.active, #formatChips .chip[aria-pressed="true"]');
+  return active ? (active.dataset.format || active.textContent.trim()) : 'Conference / Forum';
+}
+
+document.querySelectorAll('#formatChips .chip').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('#formatChips .chip').forEach(function(b){
+      b.setAttribute('aria-pressed', 'false');
+      b.classList.remove('active');
+    });
+    btn.setAttribute('aria-pressed', 'true');
+    btn.classList.add('active');
+  });
+});
+
 function enquiryData(){
   return {
     name: val('f-name'), org: val('f-org'), email: val('f-email'), phone: val('f-phone'),
+    format: selectedFormat(),
     dates: val('f-dates') || 'To be confirmed', service: document.getElementById('f-service').value,
     delegates: val('f-delegates') || 'To be confirmed',
     langs: selectedLanguages().join(', ') || 'To be confirmed',
@@ -1228,7 +1337,7 @@ function showSuccess(channel, d){
       '<span style="white-space:nowrap; display:inline-flex; align-items:center; gap:6px"><span style="color:var(--teal)">✉️</span> <a href="mailto:bigwi.mike@gmail.com" style="color:inherit; text-decoration:none">bigwi.mike@gmail.com</a></span>' +
     '</div>' +
     '<div class="success-summary" style="margin-top:12px; padding-top:12px; border-top:1px solid color-mix(in srgb, var(--green) 30%, transparent); font-size:14px; line-height:1.5">' +
-      '<strong>Summary:</strong> <span>' + esc(d.service) + '</span> for <strong>' + esc(d.org) + '</strong> &bull; ' + esc(d.dates) + ' &bull; ' + esc(d.delegates) + ' delegates &bull; ' + esc(d.langs) +
+      '<strong>Summary:</strong> <span>' + esc(d.service) + '</span> (' + esc(d.format) + ') for <strong>' + esc(d.org) + '</strong> &bull; ' + esc(d.dates) + ' &bull; ' + esc(d.delegates) + ' delegates &bull; ' + esc(d.langs) +
     '</div>' +
     '<p style="margin-top:10px; font-size:13px; color:var(--ink-3)">If nothing opened, call or WhatsApp +254 700 567 098 directly and quote your organisation name.</p>';
   formSuccess.classList.add('show');
@@ -1243,6 +1352,7 @@ document.getElementById('sendWhatsApp').addEventListener('click', function(){
     'Organization: ' + d.org + '\n' +
     'Email: ' + d.email + '\n' +
     'Phone: ' + d.phone + '\n' +
+    'Event Format: ' + d.format + '\n' +
     'Service: ' + d.service + '\n' +
     'Dates & Location: ' + d.dates + '\n' +
     'Delegates: ' + d.delegates + '\n' +
@@ -1260,7 +1370,7 @@ form.addEventListener('submit', function(e){
   var body =
     'Dear Shiloh & Smith Solutions Team,\n\nWe would like to request an official quotation:\n\n' +
     '- Client Name: ' + d.name + '\n- Organization: ' + d.org + '\n- Email: ' + d.email + '\n' +
-    '- Phone / WhatsApp: ' + d.phone + '\n- Service Category: ' + d.service + '\n' +
+    '- Phone / WhatsApp: ' + d.phone + '\n- Event Format: ' + d.format + '\n- Service Category: ' + d.service + '\n' +
     '- Target Dates & Venue: ' + d.dates + '\n- Number of Delegates: ' + d.delegates + '\n' +
     '- Languages Required: ' + d.langs + '\n- Notes / Terms of Reference: ' + d.notes + '\n\nBest regards,\n' + d.name;
   window.location.href = 'mailto:bigwi.mike@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
@@ -1281,6 +1391,15 @@ var I18N = {
     equipmentTitle: "The kit, <em>up close</em>",
     languagesTitle: "Language for <em>every room</em>",
     aboutTitle: "People before <em>process</em>",
+    formatsTitle: "Different events. <em>One thoughtful language plan.</em>",
+    formatsSub: "Whether it is a high-level ministerial summit or a technical training seminar, we shape the acoustics, interpreter briefing, and audio distribution around how your room actually operates.",
+    pillarsTitle: "What a good partnership feels like",
+    pillar1Title: "Clarity before event day",
+    pillar1Desc: "Detailed speaker and interpreter briefings, acoustic site assessments, precise schedule coordination, and contingency planning well ahead of opening remarks.",
+    pillar2Title: "Respect for language and context",
+    pillar2Desc: "Terminology, technical jargon, dialect nuances, and diplomatic register matched by vetted, accredited simultaneous interpreters with domain expertise.",
+    pillar3Title: "One coordinated point of contact",
+    pillar3Desc: "A single dedicated project lead on-site in Nairobi who coordinates booth technicians, interpreter teams, and venue sound crews without subcontract chains.",
     formNotice: "Either button opens your own WhatsApp or email app with the enquiry pre-written — you review it, then press send there. Your details are shared only when you choose to send your WhatsApp message or email."
   },
   sw: {
@@ -1295,6 +1414,15 @@ var I18N = {
     equipmentTitle: "Vifaa vyetu <em>kwa ukaribu</em>",
     languagesTitle: "Lugha kwa <em>kila mkutano</em>",
     aboutTitle: "Watu kwanza kabla ya <em>mchakato</em>",
+    formatsTitle: "Matukio mbalimbali. <em>Mpango mmoja wa lugha uliofikiriwa kwa kina.</em>",
+    formatsSub: "Iwe ni mkutano mkuu wa mawaziri au semina ya mafunzo, tunapanga sauti, maandalizi ya wakalimani, na mifumo ya usikilizaji kulingana na mahitaji halisi ya ukumbi wako.",
+    pillarsTitle: "Jinsi ushirikiano bora unavyofanya kazi",
+    pillar1Title: "Ufafanuzi mapema kabla ya siku ya tukio",
+    pillar1Desc: "Maandalizi ya kina ya wasemaji na wakalimani, ukaguzi wa ubora wa sauti ukumbini, na mipango thabiti kabla ya hotuba ya ufunguzi kuanza.",
+    pillar2Title: "Heshima kwa muktadha na usahihi wa lugha",
+    pillar2Desc: "Istilahi maalum, misamiati ya kitaalamu na viwango vya kidiplomasia vikisimamiwa na wakalimani walioidhinishwa na wenye uzoefu wa kisekta.",
+    pillar3Title: "Mawasiliano ya moja kwa moja bila mnyororo",
+    pillar3Desc: "Kiongozi mmoja maalum wa mradi ukumbini Nairobi anayeratibu mafundi wa sauti, timu ya wakalimani, na wataalamu wa ukumbi moja kwa moja.",
     formNotice: "Kitufe chochote kinafungua WhatsApp au barua pepe yako na maelezo tayari yameandikwa. Maelezo yako yatatumwa pale tu utakapochagua kubonyeza kutuma huko."
   },
   fr: {
@@ -1309,6 +1437,15 @@ var I18N = {
     equipmentTitle: "Le matériel, <em>en détail</em>",
     languagesTitle: "La langue pour <em>chaque salle</em>",
     aboutTitle: "L'humain avant le <em>processus</em>",
+    formatsTitle: "Événements variés. <em>Un plan linguistique sur mesure.</em>",
+    formatsSub: "Qu'il s'agisse d'un sommet ministériel ou d'un atelier technique, nous adaptons acoustique, préparation des interprètes et distribution audio à la dynamique réelle de votre salle.",
+    pillarsTitle: "Ce qu'un partenariat de confiance vous apporte",
+    pillar1Title: "Clarté et sérénité avant le jour J",
+    pillar1Desc: "Briefing approfondi des orateurs et des interprètes, repérage acoustique des lieux, coordination rigoureuse des plannings bien avant les premiers discours.",
+    pillar2Title: "Respect du contexte et terminologie exacte",
+    pillar2Desc: "Prise en compte des termes techniques, subtilités diplomatiques et registres assurée par des interprètes de conférence chevronnés et accrédités.",
+    pillar3Title: "Un interlocuteur unique et responsable",
+    pillar3Desc: "Un coordinateur dédié sur place à Nairobi qui pilote techniciens de cabines, interprètes et régie son du lieu sans chaîne de sous-traitance.",
     formNotice: "Chaque bouton ouvre votre propre application WhatsApp ou e-mail avec la demande pré-rédigée. Vos coordonnées ne sont partagées que lorsque vous choisissez d'envoyer votre message."
   }
 };
